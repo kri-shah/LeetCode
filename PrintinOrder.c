@@ -1,4 +1,4 @@
-//beats 73.91% in runtime
+//Beats 100.00%of users with C
 
 typedef struct {
     // User defined data may be declared here.
