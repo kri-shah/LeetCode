@@ -1,23 +1,13 @@
-#Beats 98.21%of users with Python in runtime
-
-class Solution(object):
-    def maxArea(self, height):
-        """
-        :type height: List[int]
-        :rtype: int
-        """
-        l = 0
-        r = len(height) - 1
-        area = 0
+class Solution:
+    def maxArea(self, heights: List[int]) -> int:
+        l = 0 
+        r = len(heights) - 1
+        area = -1
         while l < r:
-            if height[l] <= height[r]:
-                if height[l] * (r-l) > area:
-                    area = height[l] * (r-l)
+            area = max(area, ((r - l) * min(heights[l], heights[r])))
+            if heights[l] < heights[r]:
                 l+=1
-
-            elif height[l] > height[r]:
-                if height[r] * (r-l) > area:
-                    area = height[r] * (r-l) 
+            else:
                 r-=1
         
         return area
