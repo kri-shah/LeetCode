@@ -6,7 +6,7 @@ class Solution:
         dp = matrix[0][:]
         
         for r in range(1, ROWS):
-            curr = [0] * ROWS
+            curr = [0] * COLS
             for c in range(COLS):
                 if c == 0:
                     curr[c] = matrix[r][c] + min(dp[c], dp[c + 1])
