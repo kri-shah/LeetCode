@@ -1,2 +1,3 @@
-# LeetCode
-LeetCode Solutions I've come up with
+# LeetCode Solutions
+
+A non-exhaustive collection of my LeetCode and NeetCode solutions, implemented mostly in Python.
